@@ -65,4 +65,8 @@ app.post("/upload", (req, res) => {
   }
 });
 
-app.listen(4001);
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`dnd-multi-upload-server listening on PORT ${PORT}`);
+});
